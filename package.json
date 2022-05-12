@@ -16,7 +16,11 @@
     "type": "git",
     "url": "git@github.com:eea/volto-wise-metadata-cards-block.git"
   },
+  "addons": [
+    "@eeacms/volto-block-image-cards"
+  ],
   "dependencies": {
+    "@eeacms/volto-block-image-cards": "0.4.0",
     "@plone/scripts": "*"
   },
   "devDependencies": {
