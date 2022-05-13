@@ -1,0 +1,115 @@
+// metadata modal
+.item-metadata-modal {
+  margin: 3.5rem auto !important;
+}
+
+.item-metadata-top {
+  margin-bottom: 0.5em;
+  // font-family: 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.metadata-tab-section {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 13px;
+}
+
+.metadata-tab-title {
+  margin-right: 1px;
+  color: #09b;
+  font-weight: 500;
+}
+
+.item-metadata-modal .header h3 {
+  margin-top: 0;
+}
+
+.metadata-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.toolbar-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .btn-text {
+    font-family: Roboto, Helvetica Neue, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.toolbar-button {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  padding: 2px !important;
+  background-color: #ff421b !important;
+  border-radius: 3px !important;
+  color: #fff !important;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 !important;
+    fill: #fff !important;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.item-metadata-table {
+  .ui.definition.table tr td:first-child:not(.ignored),
+  .ui.definition.table tr td.definition {
+    width: 220px;
+    background: transparent !important;
+    color: @cardsTextColor !important;
+    font-family: Poppins;
+    vertical-align: top;
+  }
+
+  .ui.definition.table tr td a {
+    word-break: break-word;
+  }
+
+  .ui.definition.table tr:last-child {
+    border-bottom: none;
+  }
+
+  .ui.definition.table td {
+    border: none !important;
+  }
+
+  .tag-types {
+    div {
+      display: inline-block;
+      padding: 0 10px;
+      margin: 2px;
+      background-color: #ddd;
+      font-size: 12px;
+    }
+  }
+}
+
+.copy-box {
+  position: fixed;
+  z-index: 999;
+  right: 40px;
+  bottom: 40px;
+  padding: 15px;
+  margin: 0px;
+  background-color: @primaryColor;
+  border-radius: 4px;
+  color: @white;
+  font-size: 16px;
+  opacity: 0.8;
+}

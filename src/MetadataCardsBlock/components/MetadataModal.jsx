@@ -67,7 +67,7 @@ const MetadataModal = (props) => {
         centered
       >
         <Modal.Header>
-          <div className="item-modal-metadata">
+          <div className="item-metadata-top">
             {type && (
               <div className="metadata-tab-section item-snippet-type">
                 <span className="metadata-tab-title">Item: </span>

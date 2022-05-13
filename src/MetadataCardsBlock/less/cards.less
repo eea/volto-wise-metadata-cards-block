@@ -1,0 +1,158 @@
+.metadata-cards-block {
+  padding: 1rem 0;
+}
+
+.ui.cards.metadata-cards {
+  margin-right: -0.75em;
+  margin-left: -0.75em;
+
+  .metadata-card {
+    margin: 0.75em;
+    box-shadow: 1px 1px 9px 0 #d3d3d3;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 3px 1px rgb(55 146 218);
+    }
+  }
+
+  .metadata-card-content {
+    padding: 0 !important;
+  }
+
+  .metadata-card .extra {
+    border: none !important;
+    font-size: @cardsContentExtraFontSize;
+    font-weight: @cardsContentExtraFontWeight;
+  }
+}
+
+.metadata-card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.metadata-card-image {
+  height: 100%;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.metadata-card-header {
+  padding: @cardsContentPadding;
+  color: @cardsTitleColor;
+  font-size: @cardsTitleFontSize;
+  font-weight: @cardsTitleFontWeight;
+  line-height: 22px;
+}
+
+.metadata-card-description {
+  p {
+    padding: @cardsContentPadding;
+    color: @cardsTextColor;
+    font-size: @cardsContentFontSize;
+    line-height: 20px;
+  }
+}
+
+.metadata-cards-content-wrapper {
+  min-height: 90px;
+  margin: 15px 0;
+}
+
+.metadata-cards-grid-title,
+.metadata-cards-grid-description {
+  margin-bottom: 1rem;
+}
+
+// Cards slider view
+// .cards-slider {
+//   position: relative;
+//
+//   .slick-arrow {
+//     display: block !important;
+//   }
+//
+//   .slick-list {
+//     margin: 0 -0.75em !important;
+//   }
+//
+//   .slick-track {
+//     display: flex;
+//   }
+//
+//   .slick-slide {
+//     display: flex;
+//     height: auto;
+//     flex: 1;
+//     flex-direction: column;
+//     padding: 15px 0.75em !important;
+//
+//     > div {
+//       height: 100%;
+//     }
+//
+//     .ui.card {
+//       width: 100%;
+//       height: 100% !important;
+//     }
+//   }
+//
+//   .slider-arrow {
+//     position: absolute;
+//     top: 50%;
+//     bottom: auto;
+//     display: block;
+//     padding: 0;
+//     border: none;
+//     background: transparent;
+//     cursor: pointer;
+//     outline: none;
+//     transform: translate(0, -50%);
+//
+//     .icon {
+//       color: #888;
+//
+//       @media only screen and (max-width: 600px) {
+//         height: 30px !important;
+//       }
+//     }
+//   }
+//
+//   .prev-arrow {
+//     right: auto;
+//     left: -40px;
+//
+//     @media only screen and (max-width: 600px) {
+//       left: -28px;
+//     }
+//   }
+//
+//   .next-arrow {
+//     right: -40px;
+//     left: auto;
+//
+//     @media only screen and (max-width: 600px) {
+//       right: -28px;
+//     }
+//   }
+//
+//   .slick-prev,
+//   .slick-next {
+//     display: none !important;
+//   }
+// }
+
+@media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
+  .ui.cards.metadata-cards .metadata-card {
+    width: calc(50% - 2rem) !important;
+  }
+}
+
+@media only screen and (max-width: @tabletBreakpoint) {
+  .ui.cards.metadata-cards .metadata-card {
+    width: 100% !important;
+  }
+}

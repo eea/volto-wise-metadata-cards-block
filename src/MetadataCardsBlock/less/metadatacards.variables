@@ -1,0 +1,11 @@
+@cardsTitleColor: #444;
+@cardsTitleFontSize: 18px;
+@cardsTitleFontWeight: 500;
+
+@cardsTextColor: @textColor;
+
+@cardsContentPadding: 0 15px;
+@cardsContentFontSize: 15px;
+
+@cardsContentExtraFontSize: 14px;
+@cardsContentExtraFontWeight: 400;

@@ -8,7 +8,7 @@ import { serializeNodes } from 'volto-slate/editor/render';
 import { MetadataModal } from './components';
 import { getScaleUrl, getPath } from './../utils';
 
-import './css/metadatacards.less';
+import './less/style.less';
 
 export const CardItem = (props) => {
   const [isOpenModal, setOpenModal] = React.useState(false);
@@ -89,7 +89,7 @@ export const CardItem = (props) => {
               )}
 
               <div className="metadata-cards-content-wrapper">
-                {title && <div className="metadata-card-header">{title}</div>}
+                {title && <h3 className="metadata-card-header">{title}</h3>}
 
                 {!hide_description && description && (
                   <div className="metadata-card-description">
@@ -150,7 +150,7 @@ const MetadataCards = (props) => {
 
               <div style={{ textAlign: `${text_align}` }}>
                 <Card.Group
-                  className="metadata-cards-group"
+                  className="metadata-cards"
                   {...(cards_per_row && cards_per_row > 0
                     ? { itemsPerRow: cards_per_row }
                     : {})}
