@@ -17,10 +17,12 @@
     "url": "git@github.com:eea/volto-wise-metadata-cards-block.git"
   },
   "addons": [
-    "@eeacms/volto-block-image-cards"
+    "@eeacms/volto-block-image-cards",
+    "@eeacms/volto-tableau"
   ],
   "dependencies": {
     "@eeacms/volto-block-image-cards": "0.4.0",
+    "@eeacms/volto-tableau": "1.2.4",
     "@plone/scripts": "*"
   },
   "devDependencies": {
