@@ -7,7 +7,7 @@ import config from '@plone/volto/registry';
 import { Icon } from '@plone/volto/components';
 import shareSVG from '@plone/volto/icons/share.svg';
 import MapPreview from './MapPreview';
-import { useCopyToClipboard, formatItemType } from '../../utils';
+import { getPath, useCopyToClipboard, formatItemType } from '../../utils';
 
 const EEA_LICENSE =
   'EEA standard re-use policy: unless otherwise indicated, ' +
@@ -19,9 +19,7 @@ const EEA_LICENSE =
 const MetadataModal = (props) => {
   const { settings } = config;
   const { isOpen, isOnClose, item = {}, token } = props;
-  // const { item, map_preview, shareItem, item_view } = props;
   const source = item?.source?.[0] || item;
-
   const {
     description,
     lineage,
@@ -42,9 +40,8 @@ const MetadataModal = (props) => {
   const subject = source.Subject || source.subjects;
   const type = item?.source?.[0]['@type'] || item['@type'];
   const url = item?.source ? item.source[0]['@id'] : item['@id'];
-
-  // const item_path = shareItem ? getPath(source.getURL).replace('/api', '') : '';
-  const share_url = settings.publicURL;
+  const item_path = getPath(source.getURL).replace('/api', '');
+  const share_url = settings.publicURL + item_path;
   const copyright =
     license_copyright === 'EEA' ? EEA_LICENSE : license_copyright;
 
@@ -126,7 +123,7 @@ const MetadataModal = (props) => {
             )}
           </div>
           {token ? (
-            <Link to={url}>
+            <Link to={url || ''}>
               <h3>{item.title}</h3>
             </Link>
           ) : (
