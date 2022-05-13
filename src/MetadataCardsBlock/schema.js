@@ -1,3 +1,5 @@
+import config from '@plone/volto/registry';
+
 const Card = () => ({
   title: 'Card',
   fieldsets: [
@@ -56,7 +58,18 @@ const MetadataCards = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['title', 'text', 'align', 'image_scale', 'cards'],
+        fields: ['title', 'text', 'align', 'cards'],
+      },
+      {
+        id: 'style',
+        title: 'Cards styling',
+        fields: [
+          'image_scale',
+          'image_height',
+          'border_color',
+          'text_align',
+          'cards_per_row',
+        ],
       },
     ],
 
@@ -83,6 +96,28 @@ const MetadataCards = (props) => {
         title: 'Alignment',
         widget: 'align',
         type: 'string',
+      },
+      border_color: {
+        widget: 'style_simple_color',
+        title: 'Top border color',
+        type: 'color',
+        available_colors: config.settings.available_colors,
+      },
+      image_height: {
+        type: 'string',
+        title: 'Image height',
+        default: '220px',
+      },
+      cards_per_row: {
+        title: 'Cards per row',
+        type: 'number',
+        description:
+          'A group of cards can set how many cards should exist in a row.',
+      },
+      text_align: {
+        title: 'Text align',
+        widget: 'text_align',
+        default: 'left',
       },
     },
 
